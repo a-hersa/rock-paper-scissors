@@ -6,21 +6,39 @@
 </head>
 <body>
   <script>
-    // Your JavaScript goes here!
-    let number1 = prompt("What is the first number?");
-    let number2 = prompt("What is the second number?");
+    const choices = ["Rock", "Paper", "Scissors"];
 
-    let multiply = function(number1,number2) { 
-      return parseInt(number1) * parseInt(number2);     
+    let playerSelection = prompt("What is your choice?")
+    playerSelection = playerSelection.toLowerCase;
+
+    const computerSelection = computerPlay()
+
+    function computerPlay() {   
+      computerChoice = choices[Math.floor(Math.random()*choices.length)];
+      return computerChoice
     }
 
-    let result = multiply(number1,number2);
-    
-    alert(result);
-    
-
-
-
+    function playRound(playerSelection, computerSelection) {
+      if (playerSelection = "rock" && computerSelection = "Rock") {
+        alert("That's a draw!")
+      } else if (playerSelection = "rock" && computerSelection = "Paper" {
+        alert("You Lose! Paper beats Rock")
+      } else if (playerSelection = "rock" && computerSelection = "Scissors") {
+        alert("You Win! Rock beats Scissors")
+      } else if (playerSelection = "paper" && computerSelection = "Rock") {
+        alert("You Win! Paper beats Rock")
+      } else if (playerSelection = "paper" && computerSelection = "Paper") {
+        alert("That's a draw!")
+      } else if (playerSelection = "paper" && computerSelection = "Scissors") {
+        alert("You Lose! Scissors beats paper")
+      } else if (playerSelection = "scissors" && computerSelection = "Rock") {
+        alert("You Lose! Rock beats Scissors")
+      } else if (playerSelection = "scissors" && computerSelection = "Paper") {
+        alert("You Win! Scissors beats Paper")
+      } else if (playerSelection = "scissors" && computerSelection = "Scissors") {
+        alert("That's a draw!")
+      }
+    }
     
   </script>
 </body>
