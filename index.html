@@ -6,18 +6,19 @@
 </head>
 <body>
   <script>
-    let playerScore = 0
-    let computerScore = 0
-    let round = 0
-    game()
+
+    let playerScore = 0;
+    let computerScore = 0;
+    let round = 0;
+    game();
 
     function playerPlay() {
-      let playerChoice = ""
+      let playerChoice = "";
       while (playerChoice !== "rock" || playerChoice !== "paper" || playerChoice !== "scissors") {
-        playerChoice = prompt("Rock, Paper or Scissors?")
-        playerChoice = playerChoice.toLowerCase()
+        playerChoice = prompt("Rock, Paper or Scissors?");
+        playerChoice = playerChoice.toLowerCase();
         if (playerChoice === "rock" || playerChoice === "paper" || playerChoice === "scissors") {
-          return playerChoice
+          return playerChoice;
         }
         else {alert("Try again: Rock, Paper or Scissors")
         }
@@ -27,76 +28,76 @@
     function computerPlay() {
       let options = ["Rock", "Paper", "Scissors"];   
       computerChoice = options[Math.floor(Math.random()*options.length)];
-      return computerChoice
+      return computerChoice;
     }
 
     function playRound(playerSelection, computerSelection) {
       if (playerSelection === computerSelection.toLowerCase()) {
-        console.log("Computer chose " + computerSelection)
-        console.log("It's a Draw! Try again")
-        console.log("Player: " + playerScore + " - Computer: " + computerScore)
-        alert("Computer chose " + computerSelection)
-        alert("It's a Draw! Try again")
-        alert("Player: " + playerScore + " - Computer: " + computerScore)
+        console.log("Computer chose " + computerSelection);
+        console.log("It's a Draw! Try again");
+        console.log("Player: " + playerScore + " - Computer: " + computerScore);
+        alert("Computer chose " + computerSelection);
+        alert("It's a Draw! Try again");
+        alert("Player: " + playerScore + " - Computer: " + computerScore);
       }
       else if (playerSelection === "rock") {
         if (computerSelection === "Paper") {
-          computerScore++
-          console.log("Computer chose " + computerSelection)
-          console.log("You Lose! Paper beats Rock")
-          console.log("Player: " + playerScore + " - Computer: " + computerScore)
-          alert("Computer chose " + computerSelection)
-          alert("You Lose! Paper beats Rock")
-          alert("Player: " + playerScore + " - Computer: " + computerScore)
+          computerScore++;
+          console.log("Computer chose " + computerSelection);
+          console.log("You Lose! Paper beats Rock");
+          console.log("Player: " + playerScore + " - Computer: " + computerScore);
+          alert("Computer chose " + computerSelection);
+          alert("You Lose! Paper beats Rock");
+          alert("Player: " + playerScore + " - Computer: " + computerScore);
         }
         else {
-          playerScore++
-          console.log("Computer chose " + computerSelection)
-          console.log("You Win! Rock beats Scissors")
-          console.log("Player: " + playerScore + " - Computer: " + computerScore)
-          alert("Computer chose " + computerSelection)
-          alert("You Win! Rock beats Scissors")
-          alert("Player: " + playerScore + " - Computer: " + computerScore)
+          playerScore++;
+          console.log("Computer chose " + computerSelection);
+          console.log("You Win! Rock beats Scissors");
+          console.log("Player: " + playerScore + " - Computer: " + computerScore);
+          alert("Computer chose " + computerSelection);
+          alert("You Win! Rock beats Scissors");
+          alert("Player: " + playerScore + " - Computer: " + computerScore);
         }
       }
       else if (playerSelection === "paper") {
         if (computerSelection === "Rock") {
-          playerScore++
-          console.log("Computer chose " + computerSelection)
-          console.log("You Win! Paper beats Rock")
-          console.log("Player: " + playerScore + " - Computer: " + computerScore)
-          alert("Computer chose " + computerSelection)
-          alert("You Win! Paper beats Rock")
-          alert("Player: " + playerScore + " - Computer: " + computerScore)
+          playerScore++;
+          console.log("Computer chose " + computerSelection);
+          console.log("You Win! Paper beats Rock");
+          console.log("Player: " + playerScore + " - Computer: " + computerScore);
+          alert("Computer chose " + computerSelection);
+          alert("You Win! Paper beats Rock");
+          alert("Player: " + playerScore + " - Computer: " + computerScore);
         }
         else {
-          computerScore++
-          console.log("Computer chose " + computerSelection)
-          console.log("You Lose! Scissors beats Paper")
-          console.log("Player: " + playerScore + " - Computer: " + computerScore)
-          alert("Computer chose " + computerSelection)
-          alert("You Lose! Scissors beats Paper")
-          alert("Player: " + playerScore + " - Computer: " + computerScore)
+          computerScore++;
+          console.log("Computer chose " + computerSelection);
+          console.log("You Lose! Scissors beats Paper");
+          console.log("Player: " + playerScore + " - Computer: " + computerScore);
+          alert("Computer chose " + computerSelection);
+          alert("You Lose! Scissors beats Paper");
+          alert("Player: " + playerScore + " - Computer: " + computerScore);
         }
       }
       else if (playerSelection === "scissors") {
         if (computerSelection === "Rock") {
-          computerScore++
-          console.log("Computer chose " + computerSelection)
-          console.log("You Lose! Rock beats Scissors")
-          console.log("Player: " + playerScore + " - Computer: " + computerScore)
-          alert("Computer chose " + computerSelection)
-          alert("You Lose! Rock beats Scissors")
-          alert("Player: " + playerScore + " - Computer: " + computerScore)
+          computerScore++;
+          console.log("Computer chose " + computerSelection);
+          console.log("You Lose! Rock beats Scissors");
+          console.log("Player: " + playerScore + " - Computer: " + computerScore);
+          alert("Computer chose " + computerSelection);
+          alert("You Lose! Rock beats Scissors");
+          alert("Player: " + playerScore + " - Computer: " + computerScore);
         }
         else {
-          playerScore++
-          console.log("Computer chose " + computerSelection)
-          console.log("You Win! Scissors beats Paper")
-          console.log("Player: " + playerScore + " - Computer: " + computerScore)
-          alert("Computer chose " + computerSelection)
-          alert("You Win! Scissors beats Paper")
-          alert("Player: " + playerScore + " - Computer: " + computerScore)
+          playerScore++;
+          console.log("Computer chose " + computerSelection);
+          console.log("You Win! Scissors beats Paper");
+          console.log("Player: " + playerScore + " - Computer: " + computerScore);
+          alert("Computer chose " + computerSelection);
+          alert("You Win! Scissors beats Paper");
+          alert("Player: " + playerScore + " - Computer: " + computerScore);
         }
       }
       else {result = "Choose a valid option! Rock, Paper or Scissors"}
@@ -104,23 +105,23 @@
     
     function game() {
       while (playerScore < 5 || computerScore < 5) {
-        playerSelection = playerPlay()
-        computerSelection = computerPlay()
-        playRound(playerSelection, computerSelection)
+        playerSelection = playerPlay();
+        computerSelection = computerPlay();
+        playRound(playerSelection, computerSelection);
         if (playerScore === 5 || computerScore === 5) {
           if (playerScore === 5) {
-            console.log("You Win the best of 5! Well done")
-            alert("You Win the best of 5! Well done")
+            console.log("You Win the best of 5! Well done");
+            alert("You Win the best of 5! Well done");
             break;
           }
           else {
-            console.log("You Lose the best of 5! Try again")
-            alert("You Lose the best of 5! Try again")
+            console.log("You Lose the best of 5! Try again");
+            alert("You Lose the best of 5! Try again");
             break;
           }
-        round++
-        console.log("Round " + round + ". Player: " + playerScore + " - Computer: " + computerScore)
-        alert("Round " + round + ". Player: " + playerScore + " - Computer: " + computerScore)
+        round++;
+        console.log("Round " + round + ". Player: " + playerScore + " - Computer: " + computerScore);
+        alert("Round " + round + ". Player: " + playerScore + " - Computer: " + computerScore);
         }
       }
     }
