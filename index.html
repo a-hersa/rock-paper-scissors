@@ -10,15 +10,17 @@
     let computerScore = 0
     let round = 0
     game()
+
     function playerPlay() {
       let playerChoice = ""
       while (playerChoice !== "rock" || playerChoice !== "paper" || playerChoice !== "scissors") {
         playerChoice = prompt("Rock, Paper or Scissors?")
         playerChoice = playerChoice.toLowerCase()
-        if (playerChoice !== "rock" || playerChoice !== "paper" || playerChoice !== "scissors") {
+        if (playerChoice === "rock" || playerChoice === "paper" || playerChoice === "scissors") {
           return playerChoice
         }
-        alert("Try again")
+        else {alert("Try again: Rock, Paper or Scissors")
+        }
       }
     }
     
