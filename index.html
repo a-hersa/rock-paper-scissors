@@ -6,12 +6,16 @@
 </head>
 <body>
   <script>
+    
+    /*This is a simple Rock, Paper and Scissors game created as part of The Odin Project bootcamp*/
 
     let playerScore = 0;
     let computerScore = 0;
     let round = 0;
     playGame();
 
+    /*This function asks to the user for a choice through an alert.
+    It aso validates that a correct value has been entered*/
     function askPlayer() {
       let playerChoice = "";
       while (playerChoice !== "rock" || playerChoice !== "paper" || playerChoice !== "scissors") {
@@ -25,12 +29,14 @@
       }
     }
     
+    /*This function generates a random choice and counts as the Computer choice*/
     function askComputer() {
       let options = ["Rock", "Paper", "Scissors"];   
       computerChoice = options[Math.floor(Math.random()*options.length)];
       return computerChoice;
     }
 
+    /*This function runs a single round of the game comparing Player's and Computer's selections*/
     function playRound(playerSelection, computerSelection) {
       if (playerSelection === computerSelection.toLowerCase()) {
         console.log("Computer chose " + computerSelection);
@@ -103,6 +109,7 @@
       else {result = "Choose a valid option! Rock, Paper or Scissors"}
       }
     
+    /*The following function wraps it all together and runs consecutive rounds until an opponent scores 5*/
     function playGame() {
       while (playerScore < 5 || computerScore < 5) {
         playerSelection = askPlayer();
