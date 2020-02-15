@@ -6,7 +6,10 @@
 </head>
 <body>
   <script>
-
+    let playerScore = 0
+    let computerScore = 0
+    let round = 0
+    game()
     function playerPlay() {
       let playerChoice = ""
       while (playerChoice !== "rock" || playerChoice !== "paper" || playerChoice !== "scissors") {
@@ -77,9 +80,7 @@
       }
       else {result = "Choose a valid option! Rock, Paper or Scissors"}
       }
-    let playerScore = 0
-    let computerScore = 0
-    let round = 0
+    
     function game() {
       /*let playerScore = 0
       let computerScore = 0
