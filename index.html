@@ -32,8 +32,10 @@
 
     function playRound(playerSelection, computerSelection) {
       if (playerSelection === computerSelection.toLowerCase()) {
+        console.log("Computer chose " + computerSelection)
         console.log("It's a Draw! Try again")
         console.log("Player: " + playerScore + " - Computer: " + computerScore)
+        alert("Computer chose " + computerSelection)
         alert("It's a Draw! Try again")
         alert("Player: " + playerScore + " - Computer: " + computerScore)
       }
