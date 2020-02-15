@@ -10,9 +10,9 @@
     let playerScore = 0;
     let computerScore = 0;
     let round = 0;
-    game();
+    playGame();
 
-    function playerPlay() {
+    function askPlayer() {
       let playerChoice = "";
       while (playerChoice !== "rock" || playerChoice !== "paper" || playerChoice !== "scissors") {
         playerChoice = prompt("Rock, Paper or Scissors?");
@@ -25,7 +25,7 @@
       }
     }
     
-    function computerPlay() {
+    function askComputer() {
       let options = ["Rock", "Paper", "Scissors"];   
       computerChoice = options[Math.floor(Math.random()*options.length)];
       return computerChoice;
@@ -103,10 +103,10 @@
       else {result = "Choose a valid option! Rock, Paper or Scissors"}
       }
     
-    function game() {
+    function playGame() {
       while (playerScore < 5 || computerScore < 5) {
-        playerSelection = playerPlay();
-        computerSelection = computerPlay();
+        playerSelection = askPlayer();
+        computerSelection = askComputer();
         playRound(playerSelection, computerSelection);
         if (playerScore === 5 || computerScore === 5) {
           if (playerScore === 5) {
