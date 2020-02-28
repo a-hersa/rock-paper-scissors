@@ -43,7 +43,7 @@ button#scissors {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 50px 0px 0px 0px;
+    margin: 20px 0px 0px 0px;
 }
 .player-score {
     flex-grow: 1;
@@ -55,6 +55,13 @@ button#scissors {
 .player-choice {
     flex-grow: 1;
     width: 15%;
+}
+.messages {
+    flex-grow: 1;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+    font: bold 58px Helvetica, Arial, Sans-Serif;width: 40%;
+    width: 100%;
 }
 .computer-choice {
     flex-grow: 1;
