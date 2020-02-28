@@ -50,11 +50,23 @@ button#scissors {
     text-align: center;
     text-shadow: 2px 2px 4px #000;
     font: bold 100px Helvetica, Arial, Sans-Serif;
-    width: 15%;
+    width: 10%;
 }
 .player-choice {
     flex-grow: 1;
-    width: 15%;
+    width: 40%;
+}
+.computer-choice {
+    flex-grow: 1;
+    transform: scaleX(-1);
+    width: 40%;
+}
+.computer-score {
+    flex-grow: 1;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+    font: bold 100px Helvetica, Arial, Sans-Serif;
+    width: 10%;
 }
 .messages {
     flex-grow: 1;
@@ -62,26 +74,6 @@ button#scissors {
     text-shadow: 2px 2px 4px #000;
     font: bold 58px Helvetica, Arial, Sans-Serif;width: 40%;
     width: 100%;
-}
-.messages-mobile {
-    flex-grow: 1;
-    text-align: center;
-    text-shadow: 2px 2px 4px #000;
-    font: bold 58px Helvetica, Arial, Sans-Serif;width: 40%;
-    display: none;
-    width: 100%;
-}
-.computer-choice {
-    flex-grow: 1;
-    transform: scaleX(-1);
-    width: 15%;
-}
-.computer-score {
-    flex-grow: 1;
-    text-align: center;
-    text-shadow: 2px 2px 4px #000;
-    font: bold 100px Helvetica, Arial, Sans-Serif;
-    width: 15%;
 }
 div img {
     width: 300px;
