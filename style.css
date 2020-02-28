@@ -55,6 +55,7 @@ button#scissors {
 .player-choice {
     flex-grow: 1;
     width: 40%;
+    align-content: flex-start;
 }
 .computer-choice {
     flex-grow: 1;
