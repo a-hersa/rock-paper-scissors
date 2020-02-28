@@ -50,31 +50,23 @@ button#scissors {
     text-align: center;
     text-shadow: 2px 2px 4px #000;
     font: bold 100px Helvetica, Arial, Sans-Serif;
-    width: 10%;
+    width: 15%;
 }
 .player-choice {
     flex-grow: 1;
-    width: 40%;
-    align-content: flex-start;
+    width: 15%;
 }
 .computer-choice {
     flex-grow: 1;
     transform: scaleX(-1);
-    width: 40%;
+    width: 15%;
 }
 .computer-score {
     flex-grow: 1;
     text-align: center;
     text-shadow: 2px 2px 4px #000;
     font: bold 100px Helvetica, Arial, Sans-Serif;
-    width: 10%;
-}
-.messages {
-    flex-grow: 1;
-    text-align: center;
-    text-shadow: 2px 2px 4px #000;
-    font: bold 58px Helvetica, Arial, Sans-Serif;width: 40%;
-    width: 100%;
+    width: 15%;
 }
 div img {
     width: 300px;
