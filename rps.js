@@ -13,7 +13,6 @@ const scoreboardWrapper = document.querySelector(".scoreboard-wrapper");
 const playerScoreDiv = document.querySelector(".player-score");
 const playerChoiceDiv = document.querySelector(".player-choice");
 const messages = document.querySelector(".messages");
-const messagesMobile = document.querySelector(".messages-mobile");
 const computerChoiceDiv = document.querySelector(".computer-choice");
 const computerScoreDiv = document.querySelector(".computer-score");
 
@@ -37,7 +36,6 @@ function shake() {
   playerChoiceDiv.classList.add("shaking-left");
   computerChoiceDiv.classList.add("shaking-right");
   messages.innerHTML = "";
-  messagesMobile.innerHTML = "";
 }
 
 playerChoiceDiv.addEventListener("animationend", afterShake);
@@ -59,7 +57,6 @@ function afterShake() {
 
 function replaceContent(content) {
   messages.innerHTML = content;
-  messagesMobile.innerHTML = content;
   playerScoreDiv.innerHTML = playerScore;
   computerScoreDiv.innerHTML = computerScore;
 };
@@ -131,12 +128,10 @@ function playRound(playerSelection, computerSelection) {
 function checkScore() {
   if (playerScore === 5) {
     messages.innerHTML = "You Win the game!";
-    messagesMobile.innerHTML = "You Win the game!";
     gameFinished++;
   }
   else if (computerScore === 5) {
     messages.innerHTML = "You Lose the game!";
-    messagesMobile.innerHTML = "You Lose the game!";
     gameFinished++;
   }
   else {
