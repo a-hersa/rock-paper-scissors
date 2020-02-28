@@ -1,0 +1,96 @@
+h1 {
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+    font: bold 52px Helvetica, Arial, Sans-Serif;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.choices-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+button {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+}
+button#rock {
+    background: url( "images/rock.png" );
+    background-size: cover;
+}
+button#paper {
+    background: url( "images/paper.png" );
+    background-size: cover;
+}
+button#scissors {
+    background: url( "images/scissors.png" );
+    background-size: cover;
+}
+.scoreboard-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 100px 0px 0px 0px;
+}
+.player-score {
+    flex-grow: 1;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+    font: bold 100px Helvetica, Arial, Sans-Serif;
+    width: 15%;
+}
+.player-choice {
+    flex-grow: 1;
+    width: 15%;
+}
+.messages {
+    flex-grow: 1;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+    font: bold 58px Helvetica, Arial, Sans-Serif;width: 40%;
+}
+.computer-choice {
+    flex-grow: 1;
+    transform: scaleX(-1);
+    width: 15%;
+}
+.computer-score {
+    flex-grow: 1;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+    font: bold 100px Helvetica, Arial, Sans-Serif;
+    width: 15%;
+}
+div img {
+    width: 300px;
+}
+.shaking-left {
+    animation: shake-left 0.6s 3;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.shaking-right {
+    animation: shake-right 0.6s 3;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+@keyframes shake-left {
+    0% {
+    }
+    50% {
+      transform: rotate(-45deg) translate(-50px,-200px);
+    }
+    100% {
+    }
+}
+@keyframes shake-right {
+    0% {
+    }
+    50% {
+      transform: rotate(45deg) translate(-50px,-200px) scaleX(-1);
+    }
+    100% {
+    }
+}

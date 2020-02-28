@@ -1,138 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Page Title</title>
   <meta charset="UTF-8"/>
+  <title>Rock, Paper, Scissors!</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <script>
-    
-    /*This is a simple Rock, Paper and Scissors game created as part of The Odin Project bootcamp*/
-
-    let playerScore = 0;
-    let computerScore = 0;
-    let round = 0;
-    playGame();
-
-    /*This function asks to the user for a choice through an alert.
-    It aso validates that a correct value has been entered*/
-    function askPlayer() {
-      let playerChoice = "";
-      while (playerChoice !== "rock" || playerChoice !== "paper" || playerChoice !== "scissors") {
-        playerChoice = prompt("Rock, Paper or Scissors?");
-        playerChoice = playerChoice.toLowerCase();
-        if (playerChoice === "rock" || playerChoice === "paper" || playerChoice === "scissors") {
-          return playerChoice;
-        }
-        else {alert("Try again: Rock, Paper or Scissors")
-        }
-      }
-    }
-    
-    /*This function generates a random choice and counts as the Computer choice*/
-    function askComputer() {
-      let options = ["Rock", "Paper", "Scissors"];   
-      computerChoice = options[Math.floor(Math.random()*options.length)];
-      return computerChoice;
-    }
-
-    /*This function runs a single round of the game comparing Player's and Computer's selections*/
-    function playRound(playerSelection, computerSelection) {
-      if (playerSelection === computerSelection.toLowerCase()) {
-        console.log("Computer chose " + computerSelection);
-        console.log("It's a Draw! Try again");
-        console.log("Player: " + playerScore + " - Computer: " + computerScore);
-        alert("Computer chose " + computerSelection);
-        alert("It's a Draw! Try again");
-        alert("Player: " + playerScore + " - Computer: " + computerScore);
-      }
-      else if (playerSelection === "rock") {
-        if (computerSelection === "Paper") {
-          computerScore++;
-          console.log("Computer chose " + computerSelection);
-          console.log("You Lose! Paper beats Rock");
-          console.log("Player: " + playerScore + " - Computer: " + computerScore);
-          alert("Computer chose " + computerSelection);
-          alert("You Lose! Paper beats Rock");
-          alert("Player: " + playerScore + " - Computer: " + computerScore);
-        }
-        else {
-          playerScore++;
-          console.log("Computer chose " + computerSelection);
-          console.log("You Win! Rock beats Scissors");
-          console.log("Player: " + playerScore + " - Computer: " + computerScore);
-          alert("Computer chose " + computerSelection);
-          alert("You Win! Rock beats Scissors");
-          alert("Player: " + playerScore + " - Computer: " + computerScore);
-        }
-      }
-      else if (playerSelection === "paper") {
-        if (computerSelection === "Rock") {
-          playerScore++;
-          console.log("Computer chose " + computerSelection);
-          console.log("You Win! Paper beats Rock");
-          console.log("Player: " + playerScore + " - Computer: " + computerScore);
-          alert("Computer chose " + computerSelection);
-          alert("You Win! Paper beats Rock");
-          alert("Player: " + playerScore + " - Computer: " + computerScore);
-        }
-        else {
-          computerScore++;
-          console.log("Computer chose " + computerSelection);
-          console.log("You Lose! Scissors beats Paper");
-          console.log("Player: " + playerScore + " - Computer: " + computerScore);
-          alert("Computer chose " + computerSelection);
-          alert("You Lose! Scissors beats Paper");
-          alert("Player: " + playerScore + " - Computer: " + computerScore);
-        }
-      }
-      else if (playerSelection === "scissors") {
-        if (computerSelection === "Rock") {
-          computerScore++;
-          console.log("Computer chose " + computerSelection);
-          console.log("You Lose! Rock beats Scissors");
-          console.log("Player: " + playerScore + " - Computer: " + computerScore);
-          alert("Computer chose " + computerSelection);
-          alert("You Lose! Rock beats Scissors");
-          alert("Player: " + playerScore + " - Computer: " + computerScore);
-        }
-        else {
-          playerScore++;
-          console.log("Computer chose " + computerSelection);
-          console.log("You Win! Scissors beats Paper");
-          console.log("Player: " + playerScore + " - Computer: " + computerScore);
-          alert("Computer chose " + computerSelection);
-          alert("You Win! Scissors beats Paper");
-          alert("Player: " + playerScore + " - Computer: " + computerScore);
-        }
-      }
-      else {result = "Choose a valid option! Rock, Paper or Scissors"}
-      }
-    
-    /*The following function wraps it all together and runs consecutive rounds until an opponent scores 5*/
-    function playGame() {
-      while (playerScore < 5 || computerScore < 5) {
-        playerSelection = askPlayer();
-        computerSelection = askComputer();
-        playRound(playerSelection, computerSelection);
-        if (playerScore === 5 || computerScore === 5) {
-          if (playerScore === 5) {
-            console.log("You Win the best of 5! Well done");
-            alert("You Win the best of 5! Well done");
-            break;
-          }
-          else {
-            console.log("You Lose the best of 5! Try again");
-            alert("You Lose the best of 5! Try again");
-            break;
-          }
-        round++;
-        console.log("Round " + round + ". Player: " + playerScore + " - Computer: " + computerScore);
-        alert("Round " + round + ". Player: " + playerScore + " - Computer: " + computerScore);
-        }
-      }
-    }
-
-  </script>
+  <h1>Rock, Paper, Scissors!</h1>
+  <div class="container">
+    <div class="choices-wrapper">
+      <button id="rock"></button>
+      <button id="paper"></button>
+      <button id="scissors"></button>
+    </div>
+    <div class="scoreboard-wrapper">
+      <div class="player-score">0</div>
+      <div class="player-choice"><img src="images/rock.png"></div>
+      <div class="messages"><p>Best of 5. Go!</p></div>
+      <div class="computer-choice"><img src="images/rock.png"></div>
+      <div class="computer-score">0</div>
+    </div>
+  </div>
+  <script src="rps.js" charset="utf-8"></script>
 </body>
 </html>
